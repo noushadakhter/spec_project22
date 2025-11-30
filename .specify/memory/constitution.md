@@ -1,55 +1,74 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Version change: 1.0.0 -> 1.1.0
+List of modified principles:
+  - I. Test-Driven Development (TDD) (refined)
+  - III. Code Clarity (refined)
+  - New: VII. Code Formatting and Linting
+  - New: VIII. Robust Error Handling
+  - New: IX. Comprehensive Documentation
+  - New: X. Data Structure Standards
+Added sections: None
+Removed sections:
+  - Quality Requirements
+Templates requiring updates:
+  - .specify/templates/plan-template.md ⚠ pending
+  - .specify/templates/spec-template.md ⚠ pending
+  - .specify/templates/tasks-template.md ⚠ pending
+  - .gemini/commands/sp.adr.toml ⚠ pending
+  - .gemini/commands/sp.analyze.toml ⚠ pending
+  - .gemini/commands/sp.checklist.toml ⚠ pending
+  - .gemini/commands/sp.clarify.toml ⚠ pending
+  - .gemini/commands/sp.constitution.toml ⚠ pending
+  - .gemini/commands/sp.git.commit_pr.toml ⚠ pending
+  - .gemini/commands/sp.implement.toml ⚠ pending
+  - .gemini/commands/sp.phr.toml ⚠ pending
+  - .gemini/commands/sp.plan.toml ⚠ pending
+  - .gemini/commands/sp.specify.toml ⚠ pending
+  - .gemini/commands/sp.tasks.toml ⚠ pending
+Follow-up TODOs: None
+-->
+# hellow_nowsh Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Test-Driven Development (TDD)
+All new features and bug fixes must follow a Test-Driven Development (TDD) approach. Tests must be written before implementation code, pass reliably, and maintain at least 80% code coverage.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Python Typing and Version
+All Python code must use Python 3.12 or newer. Type hints must be used consistently throughout the codebase for improved readability and maintainability.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Code Clarity
+Code must be clean, well-structured, and easy to read and understand by other developers. Prioritize simplicity, maintainability, and adherence to established design patterns.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Architectural Decision Records (ADRs)
+Important architectural decisions must be documented using Architectural Decision Records (ADRs) to capture context, rationale, and consequences.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Object-Oriented Programming (OOP)
+Adhere to essential Object-Oriented Programming (OOP) principles (e.g., Encapsulation, Inheritance, Polymorphism, Abstraction) to ensure modular, flexible, and scalable code.
 
-### [PRINCIPLE_6_NAME]
+### VI. Version Control
+All project files must be tracked and managed using Git for version control. Regular commits with descriptive messages are required.
 
+### VII. Code Formatting and Linting
+All code must adhere to consistent formatting standards, enforced by automated tools like Black. Linting tools (e.g., Ruff) must be used to identify and fix code quality issues, ensuring no linting errors or warnings are present.
 
-[PRINCIPLE__DESCRIPTION]
+### VIII. Robust Error Handling
+Errors must be handled gracefully across the application. Implement clear exception handling strategies, log errors effectively, and provide informative messages to users or calling systems. Avoid broad exception catches.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### IX. Comprehensive Documentation
+All modules, classes, functions, and complex logic blocks must be documented with clear, concise, and up-to-date docstrings. External-facing APIs and significant architectural components require comprehensive READMEs or dedicated documentation.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### X. Data Structure Standards
+For structured data, `dataclasses` must be used in Python to define clear, concise, and type-hinted data models, enhancing readability and reducing boilerplate.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Technical Stack
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Python 3.12+
+- uv package manager
+- Black (code formatter)
+- Ruff (linter)
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Constitution supersedes all other practices; Amendments require documentation, approval, and a migration plan. All Pull Requests (PRs)/code reviews must verify compliance; Complexity must be justified.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2025-11-29 | **Last Amended**: 2025-11-30
